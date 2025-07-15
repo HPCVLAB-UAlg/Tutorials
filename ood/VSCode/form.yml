@@ -1,0 +1,41 @@
+---
+cluster: "deucalion_cluster"
+
+form:
+  - bc_num_hours        # hours (0–72)
+  - bc_num_minutes      # minutes (0–59)
+  - num_cores
+  - custom_queue        # partition selector
+  - auto_accounts       # dropdown that OOD fills automatically
+
+attributes:
+  auto_accounts:
+    label: Account
+
+  custom_queue:
+    label: Queue
+    widget: select
+    options:
+      - ["normal-arm", "normal-arm"]
+      - ["ooda", "ooda"]
+    value: "normal-arm"
+
+  bc_num_hours:
+    widget: number_field
+    value: 1
+    min: 0
+    max: 72
+
+  bc_num_minutes:
+    widget: number_field
+    value: 0
+    min: 0
+    max: 59
+    step: 15
+
+  num_cores:
+    widget: number_field
+    label: CPU cores
+    value: 1
+    min: 1
+    max: 8

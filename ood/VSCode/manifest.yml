@@ -1,0 +1,8 @@
+---
+name: VS Code
+category: Interactive Apps
+subcategory: Editors
+role: batch_connect
+description: >
+  Browser-based Visual Studio Code running inside a Singularity container on the *ooda* partition.
+icon: icon.png
